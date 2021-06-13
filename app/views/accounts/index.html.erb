@@ -1,0 +1,13 @@
+<h1>All Accounts</h1>
+
+<%= link_to "Create Account", new_account_path %>
+
+<section>
+  <% @accounts.each do |account| %>
+    <p>
+      <%= link_to root_url(subdomain: account.subdomain) do  %>
+        <%= account.name.capitalize %>
+      <% end %>
+    </p>
+  <% end %>
+</section>

@@ -1,0 +1,17 @@
+<h1>Creating an Account</h1>
+
+<%= form_with(model: @account) do |form| %>
+  <div>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :subdomain %>
+    <%= form.text_field :subdomain %>
+  </div>
+
+  <div>
+    <%= form.submit "Add Account" %>
+  </div>
+<% end %>
